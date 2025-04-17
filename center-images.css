@@ -1,0 +1,26 @@
+img {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-content > * {
+    margin: auto auto !important;
+}
+
+.cm-line:has(.image-embed), p:has(.image-embed) {
+    text-align: center;
+}
+
+/* image captions */
+.image-embed[alt]:after { 
+    content: attr(alt); 
+    display: block; 
+    margin: 0.2rem 1rem 0rem 1rem; 
+    /* margin-left: auto !important; */
+    /* margin-right: auto !important; */
+    text-align: center;
+    font-size: 90%; 
+    line-height: 1.4; 
+    color: var(--text-faint); 
+}

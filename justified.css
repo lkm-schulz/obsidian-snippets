@@ -1,0 +1,8 @@
+.cm-line:not(.cm-active):not(.HyperMD-codeblock):not(.cm-header), 
+.cm-list-1:not(cm-active) {
+    text-align: justify;
+}
+
+.cm-formatting-list {
+    display: inline-block; /* fix space after bullet */
+}

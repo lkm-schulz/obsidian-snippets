@@ -1,0 +1,40 @@
+/* Tweaks for Sticky Headings mod */
+
+.sticky-headings-item {
+    /* font-weight: bold; */
+    background: var(--background-primary);
+    font-family: var(--file-header-font);
+    opacity: 0.75;
+    /* font-size: 1rem; */
+}
+
+.sticky-headings-container {
+    -webkit-app-region: no-drag;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: calc(var(--file-line-width) * 1.025) !important;
+}
+
+.sticky-headings-item[data-indent-level='0'] {
+    font-weight: 700;
+}
+
+.sticky-headings-item[data-indent-level='1'] {
+    font-weight: 500;
+}
+
+.sticky-headings-root {
+    -webkit-app-region: drag; /* Makes the view-header draggable */
+    border-bottom: var(--tab-outline-width) solid var(--tab-outline-color);
+    /* padding-top: 5pt !important; */
+    padding-bottom: 5pt !important;
+    background: var(--background-primary);
+}
+
+.view-header {
+    background: var(--background-primary) !important;
+}
+
+.mod-fade:not(.mod-at-end):after {
+    background: linear-gradient(to right, transparent, var(--background-primary));
+  }

@@ -1,0 +1,115 @@
+/* changes to global variables */
+body {
+    --p-spacing: 1.0rem;
+    --p-spacing-empty: 1.0rem;
+    --heading-spacing: 0;
+    --list-edit-offset: 0;
+    --h-padding-top: .5rem;
+    --h-margin-top: 2rem;
+    --list-indent: 1.25rem;
+}
+
+
+.view-header-title {
+    /* Your custom styles here */
+    font-weight: bold;
+    color: #9375EF !important;
+}
+
+.inline-title {
+    /* Your custom styles here */
+    font-size: 200%;
+    font-weight: bold;
+    margin-bottom: 0pt;
+    padding-bottom: 1.5rem;
+    /* color: #3578F7; */
+}
+
+/* -------------------------- */
+/* edit mode (preview) tweaks */
+/* -------------------------- */
+
+
+/* Spacing before all headings */
+.cm-s-obsidian .cm-line.HyperMD-header {
+    padding-top: var(--p-spacing-empty);
+    padding-bottom: 0 !important;
+    font-weight: 600;
+}
+
+/* Larger spacing before H1 */
+.cm-line.HyperMD-header-1 {
+    padding-top: calc(var(--p-spacing-empty)*1) !important;
+}
+
+.cm-highlight {
+    border-radius: 0.25rem;
+    background-color: rgba(255, 208, 30, 0.25) !important;
+}
+
+.cm-line + .HyperMD-header-2 { 
+    padding-top: 1.4rem !important;
+    border-top: .2rem solid rgba(125, 125, 125, 0.5);
+}
+
+.cm-line.HyperMD-header-2, h2 {
+    font-size: 160% !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-content > .HyperMD-header-3, h3 {
+    border-top: .1rem dotted rgba(125, 125, 125, 0.5);
+    font-size: 130% !important;
+    /* margin-top: .5rem !important; */
+    padding-top: .5rem !important;
+}
+
+/* YAML color keys in reddish: */
+.cm-atom.cm-hmd-codeblock{color: #e06c75}
+
+.cm-line.HyperMD-header-4, h4 {
+    padding-top: var(--heading-spacing) !important;
+    /* font-size: 115% !important; */
+}
+.cm-line.HyperMD-header-5, h5 {
+    padding-top: var(--heading-spacing) !important;
+    /* font-size: 110% !important; */
+}
+
+.cm-line:has(br:only-child):not(.cm-active) {
+    line-height: .75; 
+}
+
+.cm-line {
+    padding-top: 0pt !important;
+}
+
+/* Spacing before First lines of lists */
+.is-live-preview .cm-line:not(.HyperMD-list-line) + 
+.cm-line.HyperMD-list-line {
+    padding-top: 0pt !important;
+}
+
+
+
+/* ---------------- */
+/* read mode tweaks */
+/* ---------------- */
+
+/* Larger list indent */
+.markdown-rendered .list-bullet {
+    margin-right: 5px;
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+    margin: 0pt !important;
+    max-width: 100%;
+}
+
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-line {
+    max-width: 100%;
+}
+
+.markdown-source-view.mod-cm6 .cm-line:hover .cm-fold-indicator .collapse-indicator, .markdown-source-view.mod-cm6 .cm-fold-indicator.is-collapsed .collapse-indicator {
+    display: none !important;
+    visibility: hidden !important;
+}

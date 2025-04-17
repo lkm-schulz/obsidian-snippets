@@ -1,0 +1,4 @@
+.workspace-tab-header-container-inner {
+    overflow-x: scroll;
+    -webkit-app-region: no-drag;
+}

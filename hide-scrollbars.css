@@ -1,0 +1,28 @@
+.nav-files-container,
+.cm-scroller {
+    overflow-y: auto;
+    margin-right: 3pt !important;
+}
+
+/* For WebKit-based browsers (e.g., Chrome, Edge, Safari) */
+.nav-files-container::-webkit-scrollbar,
+.cm-scroller::-webkit-scrollbar {
+    width: 6pt; /* Set scrollbar width */
+}
+
+.nav-files-container::-webkit-scrollbar-track,
+.cm-scroller::-webkit-scrollbar-track {
+    background: transparent !important; /* Makes the track invisible */
+    width: 10pt !important;
+}
+
+.nav-files-container::-webkit-scrollbar-thumb,
+.cm-scroller::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 0.25);
+    border-radius: 6pt;
+}
+
+.nav-files-container::-webkit-scrollbar-thumb:hover,
+.cm-scroller::-webkit-scrollbar-thumb:hover {
+    background: rgba(136, 136, 136, 0.75);
+}

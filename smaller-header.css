@@ -1,0 +1,11 @@
+.clickable-icon[aria-label*="Current view"] {
+    visibility: hidden;
+}
+
+.view-header-left {
+    visibility: hidden;
+}
+
+.view-header {
+    max-height: 20pt;
+}

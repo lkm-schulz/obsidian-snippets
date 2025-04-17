@@ -1,0 +1,180 @@
+body {
+    --blockquote-background-color: #8e68f51b;
+    --border-radius: .5em;
+    --callout-border-width: .1em;
+    --callout-definition: 51, 51, 172;
+    --callout-link: 50, 117, 143;
+    --callout-summary: 140, 102, 245;
+    --callout-good: 84, 182, 91;
+    --callout-bad: 214, 67, 77;
+    --callout-neutral: 100, 100, 100;
+}
+
+.theme-dark {
+    --callout-algorithm: 200, 200, 200;
+    --callout-hint: 249, 193, 24;
+}
+
+.theme-light {
+    --callout-algorithm: 90, 90, 90;
+    --callout-hint: 230, 180, 20;
+}
+
+.callout {
+    padding: 0rem;
+    border-radius: var(--border-radius);
+    --callout-color: var(--text-normal);
+    background-color: rgba(var(--callout-color), .075);
+    /* border-width: .1em; */
+}
+
+.callout-title {
+    padding-top: .35rem !important;
+    background-color: rgba(var(--callout-color), 0.1);;
+    padding: .5rem;
+    border-radius: var(--border-radius);
+    border-bottom-right-radius: 0pt;
+    border-bottom-left-radius: 0pt;
+    padding-bottom: .25rem !important;
+    padding-bottom: 0rem;
+}
+
+.callout-content {
+    border-color: rgba(var(--callout-color), var(--callout-border-opacity));
+    border-top-style: solid;
+    border-top-width: var(--callout-border-width);
+    padding: .5rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.2rem;
+    text-align: justify;
+}
+
+.callout-content p,
+.callout-content ul,
+.callout-content ol {
+    margin: 0pt;
+}
+
+.callout-content ul li,
+.callout-content ol li {
+    margin-right: 5px;
+    margin-left: 1.25rem;
+}
+
+.callout[data-callout="quote"] > .callout-content {
+    font-style: italic;
+}
+
+.callout[data-callout="quote"] > .callout-content em {
+    font-style: normal;
+}
+
+.HyperMD-quote {
+    border-radius: .25rem;
+}
+
+.callout[data-callout="def"],
+.callout[data-callout="properties"],
+.callout[data-callout="goal"],
+.callout[data-callout="facts"],
+.callout[data-callout="fact"],
+.callout[data-callout="funfact"],
+.callout[data-callout="definition"] {
+    --callout-color: var(--callout-definition);
+    --callout-icon: "lucide-book-open";
+}
+
+.callout[data-callout="link"] {
+    --callout-color: var(--callout-link);
+    --callout-icon: "lucide-link";
+}
+
+.callout[data-callout="hint"] {
+    --callout-color: var(--callout-hint);
+    --callout-icon: "lucide-lightbulb";
+}
+
+.callout[data-callout="summary"] {
+    --callout-color: var(--callout-summary);
+    --callout-icon: "lucide-filter";
+}
+
+.callout[data-callout="exam"] {
+    --callout-color: var(--callout-summary);
+    --callout-icon: "lucide-book-check";
+}
+
+.callout[data-callout="good"],
+.callout[data-callout="pros"],
+.callout[data-callout="pro"],
+.callout[data-callout="advantages"],
+.callout[data-callout="advantage"]
+{
+    --callout-color: var(--callout-good);
+    --callout-icon: "lucide-thumbs-up";
+}
+
+
+.callout[data-callout="bad"],
+.callout[data-callout="cons"],
+.callout[data-callout="con"],
+.callout[data-callout="limitation"],
+.callout[data-callout="limitations"],
+.callout[data-callout="disadvantage"],
+.callout[data-callout="downside"],
+.callout[data-callout="downsides"],
+.callout[data-callout="disadvantages"] {
+    --callout-color: var(--callout-bad);
+    --callout-icon: "lucide-thumbs-down";
+}
+
+.callout[data-callout="problem"],
+.callout[data-callout="problems"] {
+    --callout-color: var(--callout-bad);
+    --callout-icon: "lucide-octagon-alert";
+}
+
+.callout[data-callout="motivation"] {
+    --callout-color: var(--callout-warning);
+    --callout-icon: "lucide-flame";
+}
+.callout[data-callout="recipe"],
+.callout[data-callout="steps"],
+.callout[data-callout="algorithm"] {
+    --callout-color: var(--callout-algorithm);
+    --callout-icon: "lucide-scroll-text";
+}
+
+
+
+.callout[data-callout="warning"], 
+.callout[data-callout="warn"], 
+.callout[data-callout="issue"], 
+.callout[data-callout="issues"], 
+.callout[data-callout="challenges"], 
+.callout[data-callout="caution"], 
+.callout[data-callout="attention"] {
+    --callout-color: var(--callout-warning);
+    --callout-icon: "lucide-alert-triangle";
+}
+
+.callout[data-callout="tags"] {
+    --callout-color: var(--callout-neutral);
+    --callout-icon: "lucide-tags";
+}
+
+.callout[data-callout="status"] {
+    --callout-color: var(--callout-neutral);
+    --callout-icon: "trending-up";
+}
+
+.callout[data-callout="aside"],
+.callout[data-callout="note"],
+.callout[data-callout="notes"] {
+    --callout-color: var(--callout-neutral);
+    --callout-icon: "lucide-book-plus";
+}
+
+.callout[data-callout="list"] {
+    --callout-icon: "list";
+}

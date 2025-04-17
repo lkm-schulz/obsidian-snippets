@@ -1,0 +1,7 @@
+.view-header {
+    -webkit-app-region: drag; /* Makes the view-header draggable */
+}
+
+.view-header-title {
+    -webkit-app-region: no-drag;
+}

@@ -1,0 +1,38 @@
+.cm-line + .HyperMD-header-2 { 
+    padding-top: 1rem !important;
+    border-top: .2rem dotted rgba(125, 125, 125, 0.5);
+}
+
+body {
+    --margin-pre-heading-symbol: .25rem;
+}
+
+
+/* .cm-line + .HyperMD-header-2  {
+    display: flex;
+    align-items: center;
+} */
+/* 
+.cm-line + .HyperMD-header-2::before {
+    content: ".";
+    opacity: 0.5;
+    margin-right: var(--margin-pre-heading-symbol)
+}
+
+.cm-line + .HyperMD-header-3::before {
+    content: "..";
+    opacity: 0.5;  
+    margin-right: var(--margin-pre-heading-symbol)
+}
+
+.cm-line + .HyperMD-header-4::before {
+    content: "...";
+    opacity: 0.5;
+    margin-right: var(--margin-pre-heading-symbol)
+}
+
+.cm-line + .HyperMD-header-5::before {
+    content: "....";
+    opacity: 0.5;
+    margin-right: var(--margin-pre-heading-symbol)
+} */

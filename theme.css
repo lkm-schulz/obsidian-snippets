@@ -1,0 +1,99 @@
+body {
+    --p-spacing: 1.0rem;
+    --p-spacing-empty: 1.0rem;
+    --heading-spacing: 0;
+    --list-edit-offset: 0;
+    --h-padding-top: 0rem !important;
+    --h-margin-top: 0rem;
+    --list-indent: 1rem;
+    --list-padding-inline-start: 1rem;
+    --list-marker-space: 1rem;
+    --h1-line-height: 100%;
+    --h2-line-height: 100%;
+    --h3-line-height: 100%;
+    --h4-line-height: 100%;
+    --h5-line-height: 100%;
+    --inline-title-size: 1.4rem;
+    --h1-size: 1.4rem;
+    --h2-size: 1.3rem;
+    --h3-size: 1.2rem;
+    --h4-size: 1.1rem;
+    --h5-size: 1.05rem;
+    --blockquote-style: italic;
+}
+
+body.theme-light {
+    --text-normal: #454545;
+}
+
+.view-header-title {
+    font-weight: bold !important;
+    color: var(--text-accent) !important;
+}
+
+/* Blockquotes */
+
+.HyperMD-quote {
+    background: none !important;
+}
+
+.HyperMD-quote .cm-em {
+    font-style: normal;
+}
+
+.HyperMD-quote.cm-active .cm-quote:not(.cm-em) {
+    font-style: normal;
+}
+
+.HyperMD-quote.cm-active .cm-em {
+    font-style: italic;
+}
+
+/* title */
+
+.inline-title {
+    font-weight: bold;
+    padding-bottom: 0rem;
+}
+
+/* Highlights */
+
+.cm-highlight {
+    border-radius: 0.25rem;
+    background-color: rgba(255, 208, 30, 0.25) !important;
+}
+
+/* smaller empty lines */
+
+.cm-line:has(br:only-child):not(.cm-active) {
+    line-height: .75; 
+}
+
+.cm-line {
+    padding-top: 0pt !important;
+}
+
+/* Spacing before First lines of lists */
+.is-live-preview .cm-line:not(.HyperMD-list-line) + 
+.cm-line.HyperMD-list-line {
+    padding-top: 0pt !important;
+}
+
+/* YAML color keys in reddish: */
+.cm-atom.cm-hmd-codeblock{color: #e06c75}
+
+/* Read mode stuff (WIP) */
+
+/* Larger list indent */
+.markdown-rendered .list-bullet {
+    margin-right: 5px;
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+    margin: 0pt !important;
+    max-width: 100%;
+}
+
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-line {
+    max-width: 100%;
+}

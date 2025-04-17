@@ -1,0 +1,59 @@
+/*
+    VERY MUCH WORK-IN-PROGRESS
+*/
+
+div.HyperMD-codeblock:not(.HyperMD-codeblock-end)::before {
+    content: ">";
+    width: 0pt;
+    height: 0pt;
+    font-size: xx-small;
+    opacity: 75%;
+    display: block;
+    position: relative;
+    left: -1em;
+    top: .25em;
+}
+
+.HyperMD-codeblock-begin {
+    border-style: solid;
+    border-bottom: none;
+    border-radius: var(--callout-radius);
+}
+
+.HyperMD-codeblock-begin:not(.cm-active) {
+    height: .5rem;
+}
+
+.HyperMD-codeblock:not(.HyperMD-codeblock-end) {
+    border-bottom-style: solid;
+    border-bottom-color: rgba(.5, .5, .5, .1) !important;
+}
+
+.HyperMD-codeblock {
+    border-color: rgba(.5, .5, .5, var(--callout-border-opacity)) !important;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-radius: 0pt;
+    padding-right: 3rem !important;
+    border-width: var(--callout-border-width) !important;
+}
+
+.code-block-flair {
+    padding-top: .12rem !important;
+}
+
+.HyperMD-codeblock-end {
+    height: .4rem;
+    border-bottom-style: solid;
+}
+
+
+.cm-s-obsidian div.HyperMD-codeblock-end-bg {
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-begin-bg {
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
