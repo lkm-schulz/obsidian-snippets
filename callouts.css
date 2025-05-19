@@ -89,7 +89,8 @@ body {
     --callout-icon: "lucide-link";
 }
 
-.callout[data-callout="hint"] {
+.callout[data-callout="hint"],
+.callout[data-callout="remember"] {
     --callout-color: var(--callout-hint);
     --callout-icon: "lucide-lightbulb";
 }
