@@ -1,8 +1,9 @@
 body {
     --blockquote-background-color: #8e68f51b;
     --border-radius: .5em;
+    --callout-border-opacity: 0.2;
+    --callout-background-opacity: 0.03;
     --callout-border-width: .1em;
-    --callout-definition: 51, 51, 172;
     --callout-link: 50, 117, 143;
     --callout-summary: 140, 102, 245;
     --callout-good: 84, 182, 91;
@@ -13,18 +14,22 @@ body {
 .theme-dark {
     --callout-algorithm: 200, 200, 200;
     --callout-hint: 249, 193, 24;
+    --callout-definition: 88, 104, 227;
+    --callout-title-summary: 143, 123, 204;
 }
 
 .theme-light {
     --callout-algorithm: 90, 90, 90;
     --callout-hint: 230, 180, 20;
+    --callout-definition: 51, 51, 172;
+    --callout-title-summary: 89, 13, 197;
 }
 
 .callout {
     padding: 0rem;
     border-radius: var(--border-radius);
     --callout-color: var(--text-normal);
-    background-color: rgba(var(--callout-color), .075);
+    background-color: rgba(var(--callout-color), var(--callout-background-opacity));
     /* border-width: .1em; */
 }
 
@@ -84,6 +89,18 @@ body {
     --callout-icon: "lucide-book-open";
 }
 
+.callout[data-callout="formula"],
+.callout[data-callout="equation"],
+.callout[data-callout="eq"] {
+    --callout-color: var(--callout-definition);
+    --callout-icon: "square-function"
+}
+
+.callout[data-callout="image"] {
+    --callout-color: var(--callout-neutral);
+    --callout-icon: "picture"
+}
+
 .callout[data-callout="link"] {
     --callout-color: var(--callout-link);
     --callout-icon: "lucide-link";
@@ -113,6 +130,12 @@ body {
 {
     --callout-color: var(--callout-good);
     --callout-icon: "lucide-thumbs-up";
+}
+
+.callout[data-callout="solution"]
+{
+    --callout-color: var(--callout-good);
+    --callout-icon: "lucide-check";
 }
 
 
@@ -178,4 +201,20 @@ body {
 
 .callout[data-callout="list"] {
     --callout-icon: "list";
+}
+
+.callout[data-callout="exercise"],
+.callout[data-callout="task"] {
+    --callout-icon: "clipboard-list";
+    --callout-color: var(--callout-neutral);
+}
+
+.callout[data-callout="test"] {
+    --callout-icon: "file-question";
+    --callout-color: var(--callout-summary);
+    --callout-title-color: rgb(var(--callout-title-summary));
+}
+
+.callout[data-callout="test"] .callout-title-inner {
+    font-weight: 300;
 }
