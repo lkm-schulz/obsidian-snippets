@@ -1,7 +1,6 @@
 body {
     --p-spacing: 1.0rem;
     --p-spacing-empty: 1.0rem;
-    --heading-spacing: 0;
     --list-edit-offset: 0;
     --h-padding-top: 0rem !important;
     --h-margin-top: 0rem;
@@ -20,6 +19,9 @@ body {
     --h4-size: 1.1rem;
     --h5-size: 1.05rem;
     --blockquote-style: italic;
+    --heading-spacing: 0;
+    --text-highlight-bg-rgb: 255, 208, 30;
+    --text-highlight-bg: rgba(var(--text-highlight-bg-rgb), 0.25);
 }
 
 body.theme-light {
@@ -58,9 +60,14 @@ body.theme-light {
 
 /* Highlights */
 
-.cm-highlight {
+.cm-highlight,
+.markdown-rendered mark {
+    font-weight: 550;
     border-radius: 0.25rem;
-    background-color: rgba(255, 208, 30, 0.25) !important;
+    border-bottom: solid !important;
+    border-bottom-color: rgba(255, 208, 30, 1) !important;
+    padding-left: .25rem;
+    padding-right: .25rem;
 }
 
 /* smaller empty lines */
