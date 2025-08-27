@@ -1,0 +1,46 @@
+.metadata-container {
+    margin-block-end: 0pt;
+    padding: 0pt;
+    margin-top: -2em;
+}
+
+.metadata-container:not(.is-collapsed) {
+    padding-bottom: .75em;
+    margin-bottom: 1em;
+
+}
+
+.metadata-properties-title {
+    color: var(--text-muted);
+    font-family: var(--font-text);
+    /* font-style: italic; */
+    font-weight: 600;
+    opacity: .5;
+    visibility: hidden;
+    /* color: var(--link-color); */
+}
+
+.metadata-properties-heading {
+    text-align: right;
+    width: 100%;
+    z-index: 0;
+}
+
+.inline-title {
+    z-index: 1;
+    width: 90%;
+}
+
+.metadata-properties-title:hover {
+    text-decoration: underline !important;
+}
+
+.metadata-properties-title::after {
+    content: "...";
+    visibility: visible;
+}
+
+.collapse-indicator {
+    opacity: 0 !important;
+    width: 50px;
+}
